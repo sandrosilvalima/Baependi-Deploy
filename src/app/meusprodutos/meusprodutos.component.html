@@ -1,0 +1,23 @@
+<div class="row">
+  <div id="container" style="height: 300px; width: 500px;" *ngFor='let produto of user.listaDeProdutos'>
+      <div class="product-details">
+          <h6>{{produto.nomeProduto}}</h6>
+          <span class="hint-star star">
+       <i class="fa fa-star" aria-hidden="true"></i>
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+      <i class="fa fa-star-o" aria-hidden="true"></i>
+      </span>
+          <p class="information">{{produto.descricaoProduto}}</p>
+          <div class="control">
+              <a class="text-info" [routerLink]="['/produto-edit',produto.idProduto]">Editar</a>
+
+              <a class="ml-4 text-danger" [routerLink]="['/produto-delete',produto.idProduto]">Deletar</a>
+          </div>
+      </div>
+      <div class="product-image">
+          <img src="{{produto.fotoProduto}}" alt="Foto do produto">
+      </div>
+  </div>
+</div>

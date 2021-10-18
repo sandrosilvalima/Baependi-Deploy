@@ -1,0 +1,49 @@
+<div class="container-fluid divPrincipal ">
+
+    <div class="row d-flex align-items-center">
+        <div class>
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-06">
+                    <h1 class="text-center mb-3">Entrar</h1>
+                    <img src="https://i.imgur.com/WQ5g5pI.png?1" class="mb-4" style="width: 300px;" alt="Logo Baependi">
+
+                    <div class="form-group ">
+                        <label for="email"> E-mail do Usuário</label>
+                        <input [(ngModel)]="usuarioEspelho.email" class="form-control" type="email" name="email" id="email" placeholder="E-mail">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha"> Senha</label>
+                        <input [(ngModel)]="usuarioEspelho.senha" class="form-control" type="password" name="senha" id="senha" placeholder="Sua Senha">
+                    </div>
+
+                    <div class="d-flex justify-content-center ">
+                        <button type="submit" class="btn btn-info" (click)='entrar()'>
+                            Entrar
+                        </button>
+                    </div>
+
+                    <hr class="mt-5 mb-5">
+
+                    <p class="text-center">
+                        Ainda não tem conta? <a style="color: rgb(17, 0, 255);" routerLink='/cadastrar'> Cadastre-se aqui!</a>
+                    </p>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="footer-copyright text-center py-2 divRodape">
+    <p class="d-flex justify-content-center">
+        Baependi &copy;
+    </p>
+</div>

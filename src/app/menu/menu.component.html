@@ -1,0 +1,130 @@
+<nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand" routerLink="/inicio"
+    ><img
+      class="menu-brand"
+      src="https://i.imgur.com/XGwweaU.png"
+      alt="Baependi-Logo"
+  /></a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link "
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          routerLink="/todosprodutos"
+        >
+          Produtos
+        </a>
+        
+      </li>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Reutilização
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" style="color: green;" routerLink="/informacoes">O que é</a>
+          <a class="dropdown-item" style="color: green;" routerLink="/ods">ODS-13</a>
+          <a class="dropdown-item" style="color: green;" routerLink="/dados">Dados</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/sobre-nos">Sobre nós</a>
+      </li>
+
+      <form class="form-inline my-2 my-lg-0 ml-5">
+        <div id="divBusca">
+          <input
+            name="busca"
+            type="search"
+            id="txtBusca"
+            placeholder="O que você procura?"
+          />
+          <button class="btn" type="submit" id="cor">
+          <img  src="https://img.icons8.com/material-outlined/24/000000/search--v1.png"/>
+          </button>
+        </div>
+      </form>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item" *ngIf="!auth.logado()">
+        <a class="nav-link mt-2" href="#" data-toggle="modal" data-target="#entrar">Entrar</a>
+      </li>
+
+      <li class="nav-item dropdown" *ngIf="auth.logado()">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img class="mr-0" src="https://img.icons8.com/bubbles/50/000000/lifecycle.png"/>Olá,{{auth.nome()}}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" style="color: green;" [routerLink]="['/user-edit', id]">Perfil</a>
+          <a class="dropdown-item" style="color: green;" *ngIf="auth.logado()" routerLink="/produto"
+          >Cadastre um novo produto</a>
+          <a class="dropdown-item" style="color: green;" *ngIf="auth.logado()" routerLink="/meusprodutos"
+          >Meus produtos</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" style="color:green;" (click)="sair()" href="#">Sair</a>
+          <span></span>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#" routerLink="/carrinho">
+          <img src="https://img.icons8.com/bubbles/50/000000/man-green-shopping-basket.png" />
+         </a>
+      </li>
+    </ul>
+    <div class="p-3"></div>
+  </div>
+</nav>
+
+<!-- ========================= INÍCIO MODAL ENTRADA de USUARIO ========================= -->
+
+
+<body class="login">
+  <div class="container">
+      <div class="modal fade" id="entrar" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content modal-backdrop">
+                  <div class="modal-header">
+                      <div class="login-container-wrapper clearfix">
+                        <a href="#" data-dismiss="modal"><img class="img1" src="https://img.icons8.com/metro/26/fa314a/x-coordinate.png"/></a>
+
+                          <div class="welcome"><strong>Bem-vindo</strong> </div>
+
+                          <div class="modal-body">
+
+                              <div class="form-group ">
+                                  <input [(ngModel)]="usuarioEspelho.email" class="form-control" type="email" name="email" id="email" placeholder="E-mail">
+                              </div>
+
+                              <div class="form-group">
+                                  <input [(ngModel)]="usuarioEspelho.senha" class="form-control" type="password" name="senha" id="senha" placeholder="Senha">
+                              </div>
+                              <div class="form-group">
+                                  <button type="submit" (click)='entrar()' class="btn btn-success btn-lg btn-block" data-dismiss="modal"> Entrar  </button>
+                              </div>
+
+                              <div class="form-group">
+                                  <div class="checkbox pull-left">
+                                      <label><input type="checkbox"> Lembrar-me</label>
+                                  </div>
+                                  <div class="checkbox pull-right">
+                                      <label> <a class="cadastro" href="/cadastrar">Cadastre-se</a> </label>
+                                  </div>
+
+                              </div>
+                          </div>
+
+                          <!-- ========================= FIM MODAL ENTRADA de USUARIO ========================= -->

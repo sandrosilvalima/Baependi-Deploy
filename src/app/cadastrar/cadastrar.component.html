@@ -1,0 +1,173 @@
+<div class="container register mb-5">
+  <div class="row">
+    <div class="col-md-3 register-left">
+      <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+      <h3>Bem-vindo</h3>
+      <p></p>
+      <h4>É rápido fazer parte da Baependi!</h4>
+    </div>
+    <div class="col-md-9 register-right">
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="home"
+          role="tabpanel"
+          aria-labelledby="home-tab"
+        >
+          <h3 class="register-heading">Cadastro</h3>
+          <div class="row register-form">
+            <div class="col-md-6">
+              <!-----------------------------------------------------INÍCIO 1ª COLUNA----------------------------------------------->
+
+              <div class="form-group">
+                <input
+                  [(ngModel)]="usuario.nomeUsuario"
+                  type="text"
+                  class="form-control"
+                  id="usuario"
+                  name="usuario"
+                  placeholder="Usuário*"
+                  (click)="test()"
+                />
+              </div>
+
+              <div class="form-group">
+                <input
+                  (input)="confirmEmail($event)"
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="E-mail*"
+                  (click)="test()"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  (input)="confirmSenha($event)"
+                  type="password"
+                  class="form-control"
+                  id="senha"
+                  name="senha"
+                  placeholder="Senha* (min. 6 caracteres)"
+                  (click)="test()"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  [(ngModel)]="usuario.foto"
+                  type="text "
+                  class="form-control"
+                  id="linkFoto"
+                  name="linkFoto"
+                  placeholder="Link da Foto*"
+                  (click)="test()"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  [(ngModel)]="usuario.cidade"
+                  type="text "
+                  class="form-control"
+                  id="cidade "
+                  name="cidade"
+                  placeholder="Cidade*"
+                  (click)="test()"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  [(ngModel)]="usuario.cep"
+                  type="text "
+                  class="form-control"
+                  id="cep "
+                  name="cep"
+                  placeholder="CEP*"
+                  (click)="test()"
+                />
+              </div>
+            </div>
+
+            <!-----------------------------------------------------FIM 1ª COLUNA----------------------------------------------->
+
+            <!-----------------------------------------------------INÍCIO 2ª COLUNA----------------------------------------------->
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <input
+                  [(ngModel)]="usuario.nomePessoal"
+                  type="text"
+                  class="form-control"
+                  id="nome"
+                  name="nome"
+                  placeholder="Nome Completo*"
+                  (click)="test()"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  [(ngModel)]="usuario.email"
+                  type="email"
+                  class="form-control"
+                  id="confirmeEmail"
+                  name="confirmeEmail"
+                  placeholder=" Confirmar E-mail*"
+                  (click)="test()"
+                />
+              </div>
+
+              <div class="form-group">
+                <input
+                  [(ngModel)]="usuario.senha"
+                  type="password"
+                  class="form-control"
+                  id="confirmeSenha"
+                  name="confirmeSenha"
+                  placeholder="Confirmar Senha*"
+                  (click)="test()"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  [(ngModel)]="usuario.endereco"
+                  type="text "
+                  class="form-control"
+                  id="endereco "
+                  name="endereco"
+                  placeholder="Endereço*"
+                  (click)="test()"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  [(ngModel)]="usuario.estado"
+                  type="text"
+                  class="form-control"
+                  id="estado"
+                  name="estado"
+                  placeholder="Estado*"
+                  (click)="test()"
+                />
+              </div>
+
+              <!-----------------------------------------------------FIM 2ª COLUNA----------------------------------------------->
+
+              <div class="d-flex justify-content-around">
+                <button type="submit " class="btnCancel" routerLink="/inicio">
+                  Cancelar
+                </button>
+                <button
+                  type="submit "
+                  class="btnRegister"
+                  (click)="cadastrar()"
+                >
+                  Cadastrar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

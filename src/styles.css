@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face{
+  font-family: "fonte";
+  src: local("../../baependiF/src/assets/fonts/coolvetica\ compressed\ rg.ttf") format("Truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+

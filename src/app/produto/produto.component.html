@@ -1,0 +1,110 @@
+<div class="container register mb-5">
+  <div class="row">
+    <div class="col-md-3 register-left">
+      <img src="https://i.imgur.com/psYGUWe.png" alt="atualizar produto" />
+      <h3>Novo Produto</h3>
+      <p></p>
+      <h4>Divulgue seu produto na Baependi!</h4>
+    </div>
+    <div class="col-md-9 register-right">
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <h3 class="register-heading">Cadastro de Produto</h3>
+          <div class="row register-form">
+            <div class="col-md-6">
+
+              <div class="form-group">
+                <input [(ngModel)]="produto.nomeProduto" type="text" class="form-control" id="titulo"
+                  placeholder="Nome do Produto">
+              </div>
+
+              <div class="form-group">
+                <input [(ngModel)]="produto.precoProduto" type="text" class="form-control" id="titulo"
+                  placeholder="Preço do Produto">
+              </div>
+              <div class="form-group">
+                <input [(ngModel)]="produto.descricaoProduto" type="text" class="form-control" id="titulo"
+                  placeholder="Descrição do Produto">
+              </div>
+
+              <div class="form-group">
+                <input [(ngModel)]="produto.autoreProduto" type="text" class="form-control" id="titulo"
+                  placeholder="Autore do Produto">
+              </div>
+
+              <div class="form-group">
+                <input [(ngModel)]="produto.fotoProduto" type="text" class="form-control" id="titulo"
+                  placeholder="Foto do Produto">
+              </div>
+
+              <form id="form-select">
+                <fieldset class="select-box-svg t-neutral">
+                  <label for="select-box-svg" class="select-box-svg__label">Você fez o produto?</label>
+                  <div class="select-box-svg__inner">
+                    <select id="select-box-svg" class="select-box-svg__select" [(ngModel)]='produto.artesanal'
+                      name="artesanal">
+                      <option value="Sim">Sim</option>
+                      <option value="Não">Não</option>
+                    </select>
+                    <svg role="presentation" class="icon icon--arrow" width="62px" height="60px"
+                      viewBox="-458 261.7 41.8 38.3">
+                      <rect x="-458" y="261.4" class="icon__box" width="62" height="60" />
+                      <polygon class="icon__caret" points="-432.9,281.4 -437.1,286.4 -441.3,281.4 " />
+                    </svg>
+                  </div>
+                </fieldset>
+              </form>
+              <form id="form-select">
+                <fieldset class="select-box-svg t-neutral">
+                  <label for="select-box-svg" class="select-box-svg__label">Tipo de Material</label>
+                  <div class="select-box-svg__inner">
+                    <select id="select-box-svg" class="select-box-svg__select" [(ngModel)]='produto.tipoMaterial '
+                      name="tipoMaterial">
+                      <option value="Plástico">Plástico</option>
+                      <option value="Vidro">Vidro</option>
+                      <option value="Metal">Metal</option>
+                      <option value="Papel">Papel</option>
+                      <option value="Orgânico">Orgânico</option>
+                      <option value="Outros">Outros</option>
+
+                    </select>
+                    <svg role="presentation" class="icon icon--arrow" width="62px" height="60px"
+                      viewBox="-458 261.7 41.8 38.3">
+                      <rect x="-458" y="261.4" class="icon__box" width="62" height="60" />
+                      <polygon class="icon__caret" points="-432.9,281.4 -437.1,286.4 -441.3,281.4 " />
+                    </svg>
+                  </div>
+                </fieldset>
+              </form>
+
+              <form id="form-select">
+                <fieldset class="select-box-svg t-neutral">
+                  <label for="select-box-svg" class="select-box-svg__label">Categoria</label>
+                  <div class="select-box-svg__inner">
+                    <select id="select-box-svg" class="select-box-svg__select" [(ngModel)]="idCategoria"
+                      name="tipoProduto" (change)='findByIdCategoria() '>
+                      <option *ngFor='let item of listaCategoria ' value="{{item.idCategoria}}">{{item.tipoProduto}}
+                      </option>
+
+                    </select>
+                    <svg role="presentation" class="icon icon--arrow" width="62px" height="60px"
+                      viewBox="-458 261.7 41.8 38.3">
+                      <rect x="-458" y="261.4" class="icon__box" width="62" height="60" />
+                      <polygon class="icon__caret" points="-432.9,281.4 -437.1,286.4 -441.3,281.4 " />
+                    </svg>
+                  </div>
+                </fieldset>
+              </form>
+
+              <br>
+
+              <div class="d-flex justify-content-center">
+                <button class=" btnCancel" routerLink="/inicio">Cancelar</button>
+                <button class=" btnRegister" (click)='cadastrar() '>Cadastrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

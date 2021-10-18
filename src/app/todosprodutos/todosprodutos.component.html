@@ -1,0 +1,93 @@
+<div class="container-fluid">
+    <div class="row ml-0 pb-0 mb-0" id="section-products">
+
+
+        <div class="col-md-3 margin-top4-5rem bg-light pl-5 pt-3">
+            <ul class="nav d-flex columnn" id="nav-tab" role="tablist">
+
+                <li class="">
+                    <a class="nav-item nav-link active h5 color-green" id="nav-allProducts-tab" data-toggle="tab" href="#allProducts" (click)='findAllProdutos()' role="tab" aria-controls="nav-allProducts" aria-selected="true">Todos os produtos</a>
+                </li>
+
+
+                <li class="mt-3 mb-0">
+                    <h5 class="nav-item nav-link color-green" id="nav-categories-tab" aria-controls="nav-categories">
+                        Categorias
+                    </h5>
+                </li>
+
+
+                <li class="mb-2" *ngFor="let categoria of listaCategoria">
+                    <a (click)='findByIdCategoria(categoria.idCategoria)' class="nav-item nav-link h6 color-green mb-0 pb-0" id="nav-byCategory-tab" data-toggle="tab" href="#byCategory" role="tab" aria-controls="nav-byCategory" aria-selected="false">{{categoria.tipoProduto}}
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="tab-content col-md-9" id="nav-tabContent">
+
+            <div class="tab-pane fade show active" id="allProducts" role="tabpanel" aria-labelledby="nav-allProducts-tab">
+
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-center mb-3">
+                        <h1 class="color-green">
+                            Todos os Produtos
+                        </h1>
+                    </div>
+
+                    <div class="col-md-12 d-flex flex-wrap">
+
+
+                        <div class="col-md-3 mb-4" *ngFor='let item of listaProdutos'>
+                            <div class="card bg-light color-green">
+
+                                <div class="card-body">
+                                    <h6 class="card-title mb-0">{{item.nomeProduto}}</h6>
+                                    <img class="img-card-size" src="{{item.fotoProduto}}">
+                                    <p class="mb-2">{{item.descricaoProduto}}</p>
+                                    <p class="mb-2">{{item.autoreProduto}}</p>
+                                    <p class="card-text h5">R${{item.precoProduto}}</p>
+
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tab-pane fade" id="byCategory" role="tabpanel" aria-labelledby="nav-byCategory-tab">
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-center mb-3">
+                        <h1>
+                            {{categoria.tipoProduto}}
+                        </h1>
+                    </div>
+
+                    <div class="col-md-12 d-flex flex-wrap">
+                        <div class="col-md-3 mb-4" *ngFor='let item of categoria.categoriaProdutos'>
+
+                            <div class="card bg-light color-green">
+
+                                <div class="card-body">
+                                    <h6 class="card-title mb-0">{{item.nomeProduto}}</h6>
+                                    <img class="img-card-size" src="{{item.fotoProduto}}">
+                                    <p class="mb-2">{{item.descricaoProduto}}</p>
+                                    <p class="mb-2">{{item.autoreProduto}}</p>
+                                    <p class="card-text h5">R${{item.precoProduto}}</p>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

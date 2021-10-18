@@ -1,0 +1,10 @@
+.divPrincipal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 923px;
+}
+
+.divRodape {
+    background-color: #49ca5c;
+}
