@@ -456,3 +456,56 @@ height: 300px;
 width: 230px;
 
 }
+
+
+.bg-image {
+  /* The image used */
+  background-image: url("https://images.fineartamerica.com/images-medium-large-5/color-paint-background-and-brush-ratchapon-yanyongdecha.jpg");
+
+  /* Add the blur effect */
+ 
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.bg-image2 {
+  /* The image used */
+  background-image: url("https://i.imgur.com/2D7tQoX.jpg");
+
+  /* Add the blur effect */
+ 
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+
+/* Carrosel Histórias inspiradoras */
+.buttono {
+  background-color: #97c9e8;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 8px;
+  margin: 3px 1px;
+}
+
+.button5o {border-radius: 50%;}
+
+      /* carrosel histórias inspiradoras */

@@ -1,6 +1,6 @@
 .register {
   background: -webkit-linear-gradient(left, #baeb6c, #46882f);
-  margin-top: 3%;
+  
   padding: 3%;
 }
 
@@ -131,4 +131,11 @@ button {
   margin-top: 8%;
   margin-bottom: -15%;
   color: #e3e9ee;
+}
+
+
+.img-fundo{
+  background-image: url(https://i.imgur.com/0gTYpJb.jpg);
+  background-size: cover;
+  
 }
