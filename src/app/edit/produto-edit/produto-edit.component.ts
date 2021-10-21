@@ -4,6 +4,7 @@ import { Categoria } from 'src/app/models/Categoria';
 import { Produtos } from 'src/app/models/Produtos';
 import { CategoriaService } from 'src/app/service/categoria.service';
 import { ProdutoService } from 'src/app/service/produto.service';
+import { environment } from 'src/environments/environment.prod';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -18,6 +19,7 @@ export class ProdutoEditComponent implements OnInit {
     categoria: Categoria = new Categoria()
     listaCategoria: Categoria[]
     idCategoria: number
+    
 
 
   constructor(

@@ -42,17 +42,6 @@ body {
     }
 }
 
-
-/*Product Rating  */
-
-.hint-star {
-    display: inline-block;
-    margin-left: 0.5em;
-    color: gold;
-    width: 50%;
-}
-
-
 /* The most important information about the product */
 
 #container .product-details>p {

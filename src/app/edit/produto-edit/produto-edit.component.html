@@ -1,10 +1,12 @@
 <div class="container register mb-5">
   <div class="row">
     <div class="col-md-3 register-left">
-      <img src="https://i.imgur.com/psYGUWe.png" alt="atualizar produto" />
-      <h3>Atualizando Seu Produto</h3>
+      <img src="{{produto.fotoProduto}}" class="img-fluid rounded-bottom rounded-top" alt="foto produto">
+      <h3>{{produto.nomeProduto}}</h3>
       <p></p>
+      <h4>Altere os atributos do seu produto!</h4>
     </div>
+   
     <div class="col-md-9 register-right">
       <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -12,21 +14,32 @@
           <div class="row register-form">
             <div class="col-md-6">
 
+                
               <div class="form-group">
+                <h5 class="text-white">Nome do produto</h5>
                 <input [(ngModel)]="produto.nomeProduto" type="text" class="form-control" id="titulo"
                   placeholder="Nome do Produto">
               </div>
 
               <div class="form-group">
+                <h5 class="text-white">Foto do produto</h5>
+                <input [(ngModel)]="produto.fotoProduto" type="text" class="form-control" id="titulo"
+                  placeholder="Nome do Produto">
+              </div>
+
+              <div class="form-group">
+                <h5 class="text-white">Preço do produto</h5>
                 <input [(ngModel)]="produto.precoProduto" type="text" class="form-control" id="titulo"
                   placeholder="Preço do Produto">
               </div>
               <div class="form-group">
+                <h5 class="text-white">Descrição do produto</h5>
                 <input [(ngModel)]="produto.descricaoProduto" type="text" class="form-control" id="titulo"
                   placeholder="Descrição do Produto">
               </div>
 
               <div class="form-group">
+                <h5 class="text-white">Autore do produto</h5>
                 <input [(ngModel)]="produto.autoreProduto" type="text" class="form-control" id="titulo"
                   placeholder="Autore do Produto">
               </div>

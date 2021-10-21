@@ -155,9 +155,9 @@ a:hover {
 .login input[type="email"],
 .login input[type="password"],
 .login input:focus {
-  background-color: rgb(154, 200, 226);
+  
   border: 1px solid #4a525f;
-  color: rgb(238, 238, 238);
+  
   border-left: 4px solid #12a5d1;
 }
 

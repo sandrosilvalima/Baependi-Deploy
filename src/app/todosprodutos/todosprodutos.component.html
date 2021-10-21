@@ -29,35 +29,33 @@
         <div class="tab-content col-md-9" id="nav-tabContent">
 
             <div class="tab-pane fade show active" id="allProducts" role="tabpanel" aria-labelledby="nav-allProducts-tab">
+                        <h1 class="text-center">Todos os Produtos</h1>
 
-                <div class="row">
-                    <div class="col-md-12 d-flex justify-content-center mb-3">
-                        <h1 class="color-green">
-                            Todos os Produtos
-                        </h1>
+               <div class="row">
+                 <div class="col-md-6 mb-2"  *ngFor='let item of listaProdutos'>
+                  <div id="container" style="height: 280px; width: 500px">
+                    <!-- Start    Product details -->
+                    <div class="product-details">
+                      <!--     Product Name -->
+                        <h4>{{item.nomeProduto}}</h4>
+                      <p>Descrição: {{item.descricaoProduto}}</p>
+                      <p>Autore: {{item.autoreProduto}}</p>
+
+
+                      <!-- The most important information about the product -->
+                      <p class="btn text-white">R$ {{item.precoProduto}}</p>
+
+                      </div>
+
+                    <div class="product-image">
+                      <img src="{{item.fotoProduto}}" alt="Foto Produto" />
+
                     </div>
+                  </div>
 
-                    <div class="col-md-12 d-flex flex-wrap">
+                 </div>
 
-
-                        <div class="col-md-3 mb-4" *ngFor='let item of listaProdutos'>
-                            <div class="card bg-light color-green">
-
-                                <div class="card-body">
-                                    <h6 class="card-title mb-0">{{item.nomeProduto}}</h6>
-                                    <img class="img-card-size" src="{{item.fotoProduto}}">
-                                    <p class="mb-2">{{item.descricaoProduto}}</p>
-                                    <p class="mb-2">{{item.autoreProduto}}</p>
-                                    <p class="card-text h5">R${{item.precoProduto}}</p>
-
-
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+               </div>
             </div>
 
 
@@ -69,23 +67,32 @@
                         </h1>
                     </div>
 
-                    <div class="col-md-12 d-flex flex-wrap">
-                        <div class="col-md-3 mb-4" *ngFor='let item of categoria.categoriaProdutos'>
-
-                            <div class="card bg-light color-green">
-
-                                <div class="card-body">
-                                    <h6 class="card-title mb-0">{{item.nomeProduto}}</h6>
-                                    <img class="img-card-size" src="{{item.fotoProduto}}">
-                                    <p class="mb-2">{{item.descricaoProduto}}</p>
-                                    <p class="mb-2">{{item.autoreProduto}}</p>
-                                    <p class="card-text h5">R${{item.precoProduto}}</p>
+                      <div class="row">
+                        <div class="col-md-6 mb-1" style="margin-left: 80px;"  *ngFor='let item of categoria.categoriaProdutos'>
+                         <div id="container" style="height: 280px; width: 500px">
+                           <!-- Start    Product details -->
+                           <div class="product-details">
+                             <!--     Product Name -->
+                               <h4>{{item.nomeProduto}}</h4>
+                             <p>Descrição: {{item.descricaoProduto}}</p>
+                             <p>Autore: {{item.autoreProduto}}</p>
 
 
-                                </div>
-                            </div>
+                             <!-- The most important information about the product -->
+                             <p class="btn text-white">R$ {{item.precoProduto}}</p>
+
+                             </div>
+
+                           <div class="product-image">
+                             <img src="{{item.fotoProduto}}" alt="Foto produto" />
+
+                           </div>
+                         </div>
+
                         </div>
-                    </div>
+
+                      </div>
+
                 </div>
             </div>
         </div>

@@ -1,5 +1,6 @@
 .divPrincipal {
     height: 800px;
+    
 }
   .imgODS {
     display: block;
@@ -171,7 +172,22 @@ height: 1000px;
   border-radius: 50%;
 }
 
+.ti{
+  width: 130px;
+  height: 130px;
+}
 
+.br-30 {
+  border-radius: 30%;
+}
+
+.hr{
+  margin-top: 1rem;
+  text-align: center;
+  padding: 1rem 0 0 0;
+  border-bottom: 5px solid #97c9e8;
+
+}
 
 
 
