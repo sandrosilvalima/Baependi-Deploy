@@ -127,3 +127,21 @@ background: #DFC2F2;
 .product-image:hover img {transform: scale(1.2, 1.2);}
 
 /* fim de todos os produtos */
+/*****INPUT DE BUSCA*******/
+
+#divBusca{
+	background-color: white;
+	border-radius: 15px;
+	width: 220px;
+	display: flex;
+	position: relative;
+}
+
+#txtBusca{
+	float: left;
+	background-color: transparent;
+	padding-left: 20px;
+	font-style: italic;
+	font-size: 15px;
+	border: none;
+}

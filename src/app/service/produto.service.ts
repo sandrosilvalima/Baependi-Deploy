@@ -38,4 +38,8 @@ export class ProdutoService {
   deleteProdutos(id: number){
     return this.http.delete(`https://baependi.herokuapp.com/baependi/produtos/deletar/${id}`)
   }
+
+  getProdutos(busca: string): Observable<Produtos[]>{
+    return this.http.get<Produtos[]>(`https://baependi.herokuapp.com/baependi/produtos/acharPorNomeProduto/${busca}`, this.token)
+  }
 }

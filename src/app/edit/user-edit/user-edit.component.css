@@ -137,3 +137,9 @@ button {
   margin-bottom: -15%;
   color: #e3e9ee;
 }
+
+.img-fundo{
+  background-image: url(https://i.imgur.com/DKTKI5o.jpg);
+  background-size: cover;
+  
+}

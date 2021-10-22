@@ -58,7 +58,7 @@ export class CadastrarComponent implements OnInit {
       })
       Toast.fire({
         icon: 'error',
-        title: 'Incorrect password or email'
+        title: 'Algum campo foi preenchido erroneamente!'
       })
     }else{
       this.AutService.cadastrar(this.usuario).subscribe((resp: Usuario) => {

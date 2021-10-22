@@ -5,9 +5,18 @@
         <div class="col-md-3 margin-top4-5rem bg-light pl-5 pt-3">
             <ul class="nav d-flex columnn" id="nav-tab" role="tablist">
 
+
+              <form class="form-inline my-2 my-lg-0 ml-5">
+                <div id="divBusca">
+                  <input [(ngModel)]="buscar" name="busca" type="search" id="txtBusca" placeholder="O que você procura?"/>
+                  <button class="btn" type="submit" id="cor"> <img (click)="findProduto()" src="http://img.icons8.com/material-outlined/24/000000/search--v1.png"/>
+                  </button>
+                </div>
+              </form>
+
                 <li class="">
                     <a class="nav-item nav-link active h5 color-green" id="nav-allProducts-tab" data-toggle="tab" href="#allProducts" (click)='findAllProdutos()' role="tab" aria-controls="nav-allProducts" aria-selected="true">Todos os produtos</a>
-                </li>
+                </li>                
 
 
                 <li class="mt-3 mb-0">

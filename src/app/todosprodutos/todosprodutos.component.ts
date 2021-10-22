@@ -17,6 +17,7 @@ export class TodosprodutosComponent implements OnInit {
   listaCategoria : Categoria[]
   listaProdutos: Produtos[]
   idCategoria: number
+  buscar: string
 
 
 
@@ -52,6 +53,12 @@ export class TodosprodutosComponent implements OnInit {
   findByIdCategoria(id: number){
     this.categoriaService.getByIdCategoria(id).subscribe((resp: Categoria)=>{
       this.categoria = resp
+    })
+  }
+
+  findProduto(){
+    this.produtoService.getProdutos(this.buscar).subscribe((resp: Produtos[])=>{
+      this.listaProdutos = resp
     })
   }
 }

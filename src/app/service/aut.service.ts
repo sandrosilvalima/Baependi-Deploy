@@ -63,4 +63,14 @@ export class AutService {
 
     return ok
   }
+
+foto(){
+  let ok: string = environment.foto
+
+  return ok
 }
+
+}
+
+
+
