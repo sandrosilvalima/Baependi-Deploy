@@ -532,7 +532,7 @@
      width: 25%;
      left: 37.5%;
      border-radius: 50%;
-     background-color: #1c93b8;
+     
      padding: 25px;
      box-shadow: 0px 0px 9px 2px #544534;
  }
@@ -574,10 +574,10 @@
  .login input[type="email"],
  .login input[type="password"],
  .login input:focus {
-     background-color: rgb(154, 200, 226);
+     
      border: 1px solid #4a525f;
-     color: rgb(238, 238, 238);
-     border-left: 4px solid #12a5d1;
+     
+     
  }
  
  .login input:focus {
@@ -646,6 +646,6 @@
  
  .img1 {
      position: absolute;
-     right: -20px;
+     right: -35px;
      top: -25px;
  }

@@ -91,15 +91,27 @@ export class ProdutoComponent implements OnInit {
 
       this.produtoService.postProdutos(this.produto).subscribe((resp: Produtos)=>{
         this.produto = resp
+
+        
         Swal.fire({
           icon: 'success',
           text: 'Produto cadastrado com sucesso',
 
+          
+
         })
         this.produto = new Produtos()
-
+        this.router.navigate(['/inicio'])
+      },erro =>{
+        if (erro.status == 400){
+          Swal.fire({
+            icon: 'warning',
+            text: 'Algum campo foi preenchido incorretamente!',
+  
+          })
+      
+        }
       })
-      this.router.navigate(['/inicio'])
-    }
 
-}
+    }
+  }

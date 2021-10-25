@@ -55,18 +55,26 @@ export class UserEditComponent implements OnInit {
       Swal.fire({
         icon: 'warning',
         text: 'Senha ou email incorretos!'
+        
 
       })
     } else{
       this.authService.atualizar(this.usuario).subscribe((resp: Usuario)=>{
         this.usuario = resp
-        this.router.navigate(["/inicio"])
+        
+        
       })
       Swal.fire({
         icon: 'success',
         text: 'Perfil atualizado com sucesso!',
 
       })
+      this.router.navigate(['/inicio'])
+      
+      environment.token = ''
+      environment.nomeUsuario= ''
+      environment.id= 0
+      environment.foto= ''
     }
   }
 

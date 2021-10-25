@@ -78,6 +78,15 @@ export class ProdutoEditComponent implements OnInit {
 
       })
       this.router.navigate(['/meusprodutos'])
+    },erro =>{
+      if (erro.status == 400){
+        Swal.fire({
+          icon: 'warning',
+          text: 'Algum campo foi preenchido incorretamente!',
+
+        })
+    
+      }
     })
 
   }
